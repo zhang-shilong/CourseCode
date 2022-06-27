@@ -1,0 +1,358 @@
+@font-face {
+    font-family: "Product Sans";
+    src: url("fonts/ProductSans-Regular.ttf");
+}
+
+html {
+    scroll-padding-top: 15%;
+}
+
+body {
+    font-family: "Product Sans", "Microsoft YaHei", sans-serif !important;
+    padding: 0;
+    margin: 0;
+}
+
+.top-nav-wrapper {
+    float: top;
+    height: 10%;
+    width: 100%;
+    font-size: larger;
+    position: fixed;
+    background-color: white;
+}
+
+.top-nav-content {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.top-nav-li {
+    display: inline;
+    padding: 2%;
+}
+
+.top-location-wrapper {
+    float: top;
+    height: 4%;
+    width: 100%;
+    margin-top: 4%;
+    position: fixed;
+    background-color: #F9F9FB;
+    color: #656565;
+    box-shadow: 0 3px 3px #656565;
+}
+
+.top-location-content {
+    margin-top: 0.5%;
+    margin-left: 3%;
+    font-size: small;
+}
+
+.left-wrapper {
+    height: 92%;
+    width: 20%;
+    margin-top: 6%;
+    background-color: #3d3d3d;
+    float: left;
+    color: white;
+    position: fixed;
+    overflow-y: scroll;
+}
+
+.left-wrapper::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+.left-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+}
+
+.left-wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+}
+
+.left-content {
+    margin-top: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.main-wrapper {
+    margin-left: 20%;
+    height: auto;
+    background-color: white;
+    overflow: hidden;
+}
+
+.main-content {
+    margin: 10% 28% 5% 4%;
+    float: left;
+    line-height: 1.8;
+}
+
+.pdf-wrapper {
+    margin-top: 8%;
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 100%;
+}
+
+.toc-wrapper {
+    float: right;
+    height: auto;
+    width: 20%;
+    margin-top: 18%;
+    margin-right: 0;
+    position: fixed;
+    right: 0;
+    overflow: hidden;
+}
+
+.toc-title {
+    font-size: x-large;
+}
+
+.toc-content {
+    list-style-type: none;
+    font-size: large;
+    line-height: 1.6;
+}
+
+.article-list {
+    list-style-type: none;
+    font-size: large;
+    line-height: 1.6;
+    margin-top: 10%;
+    margin-left: 10px;
+    padding: 20px;
+}
+
+.article-line {
+    background-color: white;
+    color: black;
+    padding: 2px;
+    border-radius: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow:ellipsis;
+}
+
+.article-line:hover {
+    background-color: #f4faff;
+    white-space: normal;
+}
+
+.toc-line, .toc-line-active {
+    position: relative;
+    left: -35px;
+    padding: 2px;
+}
+
+.toc-line {
+    border-left: 2px solid gray;
+    color: gray;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow:ellipsis;
+}
+
+.toc-line-active {
+    background-color: #f4faff;
+}
+
+.toc-line:hover {
+    white-space: normal;
+}
+
+.publication-wrapper {
+    width: 60%;
+    margin-top: 120px;
+    text-align: center;
+}
+
+hr.hr60 {
+    width: 60%;
+    margin-top: 20px;
+    color: gray;
+}
+
+hr.hr100 {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: silver;
+}
+
+p.publication-title {
+    font-size: xx-large;
+}
+
+p.publication-detail {
+    color: gray;
+    font-size: small;
+}
+
+input.feedback-text {
+    width: 70%;
+    height: 25px;
+}
+
+input.login-text {
+    width: 40%;
+    height: 25px;
+}
+
+textarea.feedback-textarea {
+    width: 84.6%;
+    height: 70px;
+}
+
+.simple-button, #feedback-button, #login-button, #submit-button {
+    border-radius: 4px;
+    background-color: white;
+    border: 1px #3d3d3d solid;
+    cursor: pointer;
+}
+
+.simple-button:hover, #feedback-button:hover, #login-button:hover, #submit-button:hover {
+    background-color: #3d3d3d;
+    color: white;
+}
+
+.simple-button {
+    font-size: large;
+    padding: 6px 10px;
+    margin-top: 10px;
+}
+
+#feedback-button {
+    font-size: medium;
+    padding: 3px 10px;
+}
+
+#login-button, #submit-button {
+    font-size: large;
+    padding: 3px 10px;
+}
+
+.disable-button {
+    color: gray;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 700px){
+    .main-content {
+        margin: 100px 30px 50px;
+    }
+    .toc-wrapper {
+        display:none;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .left-wrapper {
+        display: none;
+    }
+    .main-wrapper {
+        margin-left: 5%;
+    }
+    .top-nav-li {
+        font-size: medium;
+        padding: 0.2%;
+    }
+    .top-nav-content {
+        margin-top: 0.3%;
+    }
+    .simple-button {
+        font-size: small;
+        margin-top: 2px;
+    }
+}
+
+.bio {
+    line-height: 1;
+    font-size: smaller;
+}
+
+.feedback-info {
+    font-size: small;
+    color: gray;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.top-nav:link, a.top-nav:visited, a.top-nav:active {
+    color: black;
+}
+
+a.black-ref:link, a.black-ref:visited, a.black-ref:active {
+    color: black;
+}
+
+a.black-ref:hover {
+    font-weight: bold;
+}
+
+a.top-nav:hover, a.email:hover {
+    color: gray;
+}
+
+a.email:link, a.email:visited, a.email:active {
+    color: white;
+}
+
+a.toc-ref:link, a.toc-ref:visited, a.toc-ref:active, a.toc-ref:hover {
+    color: gray;
+}
+
+.shadow-window {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 10;
+    -moz-opacity: 0.6;
+    opacity: .60;
+    filter: alpha(opacity=66);
+}
+
+.login-window {
+    display: none;
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    border: 3px solid white;
+    background-color: white;
+    z-index: 11;
+    border-radius: 10px;
+}
+
+.write-window {
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border: 3px solid white;
+    background-color: white;
+    z-index: 11;
+    border-radius: 10px;
+}
