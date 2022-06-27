@@ -15,7 +15,7 @@
                 hello, <?php echo($_SESSION["username"]) ?>
             </div>
             <div style="position: absolute; top: 0; right: 30px;">
-                <form method="post" action="logout.php">
+                <form method="post" action="scripts/logout.php">
                     <input type="submit" value="Logout" class="simple-button" onclick="submitButton()" />
                 </form>
             </div>
@@ -49,7 +49,7 @@
     </div>
     <div style="text-align: center; margin-top: 70px;">
         <p style="font-size: xx-large">LOGIN to intranet</p>
-        <form method="post" action="login.php">
+        <form method="post" action="scripts/login.php">
             <table style="width: 90%; margin-left: 25%; margin-right: 20%;">
                 <tr align="left">
                     <td style="padding-top: 15px;">用户名：<input name="username" type="text" class="login-text" required></td>

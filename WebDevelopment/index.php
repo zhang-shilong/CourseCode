@@ -4,20 +4,20 @@
 <head>
     <meta charset="utf-8">
     <title>张世龙的个人博客</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="scripts/style.css" rel="stylesheet" type="text/css">
     <script src="base/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="scripts/func.js"></script>
 </head>
 
 <body>
     <?php
-        require("utils.php");
+        require("scripts/utils.php");
         if(!is_session_started()){
             session_start();
         }
     ?>
-    <?php include("sidebar.html"); ?>
-    <?php include("header.php"); ?>
+    <?php include("scripts/sidebar.html"); ?>
+    <?php include("scripts/header.php"); ?>
     <!-- 右侧内容区域 -->
     <div class="main-wrapper">
         <!-- 博客内容部分 -->
@@ -48,7 +48,7 @@
                 <li>登录功能仅支持唯一的个人账户，用户名：zsl，密码：zslzsl。</li>
             </ul>
         </div>
-        <?php include("catalog.html"); ?>
+        <?php include("scripts/catalog.html"); ?>
     </div>
 
 </body>

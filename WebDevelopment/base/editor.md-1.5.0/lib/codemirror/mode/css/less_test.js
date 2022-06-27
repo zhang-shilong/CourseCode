@@ -41,9 +41,9 @@
 
   MT("nest",
      "[qualifier .one] {",
-     "  [def @media] ([property width]: [number 400px]) {",
+     "  [def @assets] ([property width]: [number 400px]) {",
      "    [property font-size]: [number 1.2em];",
-     "    [def @media] [attribute print] [keyword and] [property color] {",
+     "    [def @assets] [attribute print] [keyword and] [property color] {",
      "      [property color]: [keyword blue];",
      "    }",
      "  }",

@@ -29,11 +29,11 @@
     ";
     if ($link->query($sql_insert)) {
         echo("<script>alert('Thanks for your feedback!');</script>");
-        header("refresh:0; url='about.php'");
+        header("refresh:0; url='../about.php'");
     }
     else {
         echo("<script>alert('[Error] Fail to insert data.');</script>");
-        header("refresh:0; url='about.php'");
+        header("refresh:0; url='../about.php'");
     }
 
 ?>

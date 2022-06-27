@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>Articles - 张世龙的个人博客</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="scripts/style.css" rel="stylesheet" type="text/css">
     <script src="base/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="scripts/func.js"></script>
     <link rel="stylesheet" href="base/editor.md-1.5.0/css/editormd.css" />
     <script src="base/editor.md-1.5.0/editormd.js"></script>
     <script type="text/javascript">
@@ -31,7 +31,7 @@
 
 <body>
     <?php
-        require("utils.php");
+        require("scripts/utils.php");
         if(!is_session_started()){
             session_start();
         }
@@ -68,7 +68,7 @@
         </ul>
 
     </div>
-    <?php include("header.php"); ?>
+    <?php include("scripts/header.php"); ?>
     <!-- 右侧内容区域 -->
     <div class="main-wrapper">
         <!-- New Article按钮 -->
@@ -96,7 +96,7 @@
             ?>
 
         </div>
-        <?php include("catalog.html"); ?>
+        <?php include("scripts/catalog.html"); ?>
     </div>
 
     <!-- 展示md文本框 -->
@@ -105,7 +105,7 @@
             <a href="javascript:void(0)" onclick="hideWriteWindow()" class="black-ref">×</a>
         </div>
         <p style="font-size: x-large; text-align: center;">Write in markdown</p>
-        <form method="post" action="submit_article.php">
+        <form method="post" action="scripts/submit_article.php">
 
             <div id="test-editor">
                 <textarea id="inp-content" style="display:none"></textarea>

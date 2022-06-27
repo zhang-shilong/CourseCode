@@ -4,20 +4,20 @@
 <head>
     <meta charset="utf-8">
     <title>About - 张世龙的个人博客</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="scripts/style.css" rel="stylesheet" type="text/css">
     <script src="base/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="scripts/func.js"></script>
 </head>
 
 <body>
     <?php
-        require("utils.php");
+        require("scripts/utils.php");
         if(!is_session_started()){
             session_start();
         }
     ?>
-    <?php include("sidebar.html"); ?>
-    <?php include("header.php"); ?>
+    <?php include("scripts/sidebar.html"); ?>
+    <?php include("scripts/header.php"); ?>
     <!-- 右侧内容区域 -->
     <div class="main-wrapper">
         <div class="main-content">
@@ -45,6 +45,7 @@
                 <li>MySQL 数据库的 schema 名称为 web_class，其下存在 3 张表：login、feedback 和 articles，数据表未创建时会自动创建；</li>
                 <li>登录功能仅支持唯一的个人账户，用户名：zsl，密码：zslzsl。</li>
             </ul>
+            <p><b>Code availability</b>：<a class="black-ref" href="https://github.com/zhang-shilong/CourseCode/tree/master/WebDevelopment">https://github.com/zhang-shilong/CourseCode/tree/master/WebDevelopment</a>。</p>
 
             <a name="Changelog"></a><h2>Changelog</h2>
             <h3>2022-06-28</h3>
@@ -82,7 +83,7 @@
             </ol>
 
             <a name="Feedback"></a><h2>Feedback</h2>
-            <form method="post" action="submit_feedback.php">
+            <form method="post" action="scripts/submit_feedback.php">
                 <table style="width: 100%">
                     <tr align="left">
                         <td>姓名&nbsp;&nbsp;：<input name="name" type="text" class="feedback-text"></td>
@@ -177,7 +178,7 @@
             ?>
 
         </div>
-        <?php include("catalog.html"); ?>
+        <?php include("scripts/catalog.html"); ?>
     </div>
 
 </body>

@@ -8,15 +8,15 @@
   // Error, because "foobarhello" is neither a known type or property, but
   // property was expected (after "and"), and it should be in parenthese.
   MT("atMediaUnknownType",
-     "[def @media] [attribute screen] [keyword and] [error foobarhello] { }");
+     "[def @assets] [attribute screen] [keyword and] [error foobarhello] { }");
 
   // Soft error, because "foobarhello" is not a known property or type.
   MT("atMediaUnknownProperty",
-     "[def @media] [attribute screen] [keyword and] ([error foobarhello]) { }");
+     "[def @assets] [attribute screen] [keyword and] ([error foobarhello]) { }");
 
-  // Make sure nesting works with media queries
+  // Make sure nesting works with assets queries
   MT("atMediaMaxWidthNested",
-     "[def @media] [attribute screen] [keyword and] ([property max-width]: [number 25px]) { [tag foo] { } }");
+     "[def @assets] [attribute screen] [keyword and] ([property max-width]: [number 25px]) { [tag foo] { } }");
 
   MT("tagSelector",
      "[tag foo] { }");
@@ -91,7 +91,7 @@
      "}");
 
   MT("indent_atMedia",
-     "[def @media] {",
+     "[def @assets] {",
      "  [tag foo] {",
      "    [property color]:",
      "      [keyword yellow];",

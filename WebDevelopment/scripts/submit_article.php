@@ -54,3 +54,7 @@
     else {
         echo("<script>alert('[Error] Please login before publishing new article!');</script>");
     }
+    header("refresh:0; url='../articles.php'");
+
+?>
+
