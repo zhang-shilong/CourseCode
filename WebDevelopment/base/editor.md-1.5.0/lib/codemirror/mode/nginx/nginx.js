@@ -147,17 +147,17 @@ CodeMirror.defineMode("nginx", function(config) {
       if (type == "hash" && context == "rule") style = "atom";
       else if (style == "variable") {
         if (context == "rule") style = "number";
-        else if (!context || context == "@assets{") style = "tag";
+        else if (!context || context == "@media{") style = "tag";
       }
 
       if (context == "rule" && /^[\{\};]$/.test(type))
         state.stack.pop();
       if (type == "{") {
-        if (context == "@assets") state.stack[state.stack.length-1] = "@assets{";
+        if (context == "@media") state.stack[state.stack.length-1] = "@media{";
         else state.stack.push("{");
       }
       else if (type == "}") state.stack.pop();
-      else if (type == "@assets") state.stack.push("@assets");
+      else if (type == "@media") state.stack.push("@media");
       else if (context == "{" && type != "comment") state.stack.push("rule");
       return style;
     },
